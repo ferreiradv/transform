@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformação</title>
+
+    <style>
+
+        body{
+            background-color: #000;
+        }
+
+        .img1{
+            text-align: center;
+            margin-top:100px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <audio autoplay loop>
+        <source src="./musica.mp3">
+    </audio>
+
+    <div class="img1">
+        <img src="./cat-sad.jpg" alt="" id="img-cat">
+    </div>
+
+    <script>
+        let cat = document.querySelector('#img-cat');
+        let number = 0;
+
+        function rotation() {
+            number++
+
+            if (number > 360) {
+                number = 0;
+            }
+
+            cat.setAttribute('style', `transform:rotate(${number}deg)`)
+
+        }
+
+        setInterval(rotation, 10);
+    </script>
+</body>
+
+</html>
