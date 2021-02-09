@@ -23,7 +23,7 @@
 
 <body>
 
-    <audio autoplay loop>
+    <audio id="musica" preload="auto" autoplay="true" loop="true">
         <source src="./musica.mp3">
     </audio>
 
@@ -31,23 +31,7 @@
         <img src="./cat-sad.jpg" alt="" id="img-cat">
     </div>
 
-    <script>
-        let cat = document.querySelector('#img-cat');
-        let number = 0;
-
-        function rotation() {
-            number++
-
-            if (number > 360) {
-                number = 0;
-            }
-
-            cat.setAttribute('style', `transform:rotate(${number}deg)`)
-
-        }
-
-        setInterval(rotation, 10);
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
