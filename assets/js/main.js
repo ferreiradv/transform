@@ -1,4 +1,5 @@
 let cat = document.querySelector('#img-cat');
+let musica = document.querySelector('#musica');
 
 let number = 0;
 function rotation() {
@@ -13,3 +14,8 @@ function rotation() {
 }
 
 setInterval(rotation, 10);
+
+document.body.addEventListener('click',()=>{
+    musica.play();
+    document.querySelector('h2').style.display = 'block';
+});
